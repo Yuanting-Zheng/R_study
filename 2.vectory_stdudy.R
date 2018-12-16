@@ -61,6 +61,46 @@ sqrt(e)
 matrix(e,ncol = 2)
 
 # NA 与 NUll 值
+# NA 是缺失值
+# Null 是 不存在的值
+
+q<-c(1,2,3,4,NA,5,6,7,8,9)
+p<-c(1,2,3,4,NULL,5,6,7,8,9)
+mean(q)
+mean(q,na.rm = T)
+mean(p)
+mode(q)
+mode(q[1])
+mode(q[5])
+
+#  NULL 的使用
+# 循环补齐
+
+z= NULL
+for (i in 1:10) if (i %% 2 ==0) z<- c(z,i)
+z
+# 筛选
+e
+e[e>3]<-0
+e
+
+# 使用subset 筛选
+#特别注意在NA上的差异
+x<- c(6,1:3,NA,12)
+x
+x[x>5]
+subset(x,x>5)
+
+# which 找出位置的函数
+which(x>5)
+
+# 向量的结构化ifelse
+x<- c(5,2,9,12)
+ifelse(x>6,2*x,3*x)
+
+
+
+
 
 
 
