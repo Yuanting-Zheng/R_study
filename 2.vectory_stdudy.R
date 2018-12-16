@@ -98,9 +98,40 @@ which(x>5)
 x<- c(5,2,9,12)
 ifelse(x>6,2*x,3*x)
 
+# diff 函数
+# 默认与前面一个比较
+x
+diff(x)
+# sign 函数 转化为1 0 -1
+sign(diff(x))
 
+# 测试向量是否相等  identical
+x<-c(1,2)
+y<-c(2,2)
+x==y
+all(x==y)
 
+identical(x,y)
 
+# 对向量元素命名 names
+x <- c(1,2,3)
+names(x)
 
+names(x)<-c("1","w","3")
+x
+names(x)
 
+# 去除向量的名字
+names(x)<- NULL
+x
+names(x)<-c("1","w","3")
+x
+names(x)
 
+# 通过名字引用向量
+x["w"]
+
+# c ()这个函数可以使得里面的内容降级
+
+x = c(2,4,"w")
+x
